@@ -6,9 +6,9 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
-    <script src="js/index.js"></script>
+    <script src="https://g.alicdn.com/ilw/ding/0.7.5/scripts/dingtalk.js"></script>
     <script>
-        DingTalkPC.config({
+        dd.config({
             agentId: '81580927',
             corpId: 'dingca516652c6ac243b35c2f4657eb6378f',
             timeStamp: '1489642950',
@@ -18,8 +18,8 @@
                 'device.notification.alert',
                 'device.notification.prompt']
         });
-        DingTalkPC.ready(function (res) {
-            DingTalkPC.runtime.permission.requestAuthCode({
+        dd.ready(function (res) {
+            dd.runtime.permission.requestAuthCode({
                 corpId: "dingca516652c6ac243b35c2f4657eb6378f", //企业ID
                 onSuccess: function (result) {
                     /*{
@@ -30,7 +30,7 @@
 
             })
             
-            DingTalkPC.device.notification.alert({
+            dd.device.notification.alert({
                 message: "亲爱的",
                 title: "提示",
                 buttonName: "收到",
@@ -40,7 +40,17 @@
                 onFail: function (err) { logger.i(err);}
             })
         });
+dd.runtime.info({
+        onSuccess: function(info) {
+            //alert('runtime info: ' + JSON.stringify(info));
+        },
+        onFail: function(err) {
+            //alert('fail: ' + JSON.stringify(err));
+        }
+    });
+    dd.error(function(err) {
 
+    });
        // DingTalkPC.error(function (error) {
        //     alert(error.errorCode);
       //      alert(error.errorMessage);
@@ -90,7 +100,7 @@
 <body>
     <form id="form1" runat="server">
     <div>
-    kokoko
+    tytyuy
     </div>
     </form>
 </body>
