@@ -17,9 +17,11 @@
         'device.notification.prompt',
             ]
         });
-
         DingTalkPC.ready(function (res) {
-            logger.e('ready');
+        DingTalkPC.runtime.permission.requestAuthCode({
+    corpId: "dingca516652c6ac243b35c2f4657eb6378f", //企业ID
+    onSuccess: function(result) {
+        logger.e('ready');
             DingTalkPC.device.notification.alert({
                 message: "亲爱的",
                 title: "提示",
@@ -29,7 +31,14 @@
                 },
                 onFail: function (err) { logger.e(err);}
             })
-        });
+    },
+    onFail : function(err) {}
+ 
+})
+               }); 
+
+            
+
         DingTalkPC.error(function (error) {
             alert(error.errorCode);
             alert(error.errorMessage);
