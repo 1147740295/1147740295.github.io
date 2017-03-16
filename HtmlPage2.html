@@ -30,23 +30,22 @@
 
             })
             
-            logger.i('ready');
             DingTalkPC.device.notification.alert({
                 message: "亲爱的",
                 title: "提示",
                 buttonName: "收到",
                 onSuccess: function () {
-                    logger.i('hello');;
+
                 },
                 onFail: function (err) { logger.i(err);}
             })
         });
 
-        DingTalkPC.error(function (error) {
-            alert(error.errorCode);
-            alert(error.errorMessage);
-            logger.i('ready');
-        });
+       // DingTalkPC.error(function (error) {
+       //     alert(error.errorCode);
+      //      alert(error.errorMessage);
+//
+      //  });
         //DingTalkPC.config({
         //    agentId: '81580927',
         //    corpId: 'dingca516652c6ac243b35c2f4657eb6378f',
@@ -91,7 +90,7 @@
 <body>
     <form id="form1" runat="server">
     <div>
-    rtrtyrt
+    gygygy
     </div>
     </form>
 </body>
