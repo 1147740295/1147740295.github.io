@@ -1,3 +1,13 @@
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="INDEX.aspx.cs" Inherits="DDDemo.INDEX" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <script src="js/index.js"></script>
+    <script>
         DingTalkPC.config({
             agentId: '81580927',
             corpId: 'dingca516652c6ac243b35c2f4657eb6378f',
@@ -27,3 +37,52 @@
             alert(error.errorMessage);
             logger.i('ready');
         });
+        //DingTalkPC.config({
+        //    agentId: '81580927',
+        //    corpId: 'dingca516652c6ac243b35c2f4657eb6378f',
+        //    timeStamp: '1489642950',
+        //    nonceStr: 'CUMT1987wlrrlw',
+        //    signature: '0ebc6f0ed0215c185d5a599bcd47bf7d7a1d3da4',
+        //    jsApiList: [
+        //'device.notification.alert',
+        //'device.notification.prompt',
+        //    ]
+        //});
+        //DingTalkPC.ready(function (res) {
+        //    DingTalkPC.runtime.permission.requestAuthCode({
+        //        corpId: "dingca516652c6ac243b35c2f4657eb6378f", //企业ID
+        //        onSuccess: function (result) {
+        //            logger.e('ready');
+        //            DingTalkPC.device.notification.alert({
+        //                message: "亲爱的",
+        //                title: "提示",
+        //                buttonName: "收到",
+        //                onSuccess: function () {
+        //                    logger.e('hello');;
+        //                },
+        //                onFail: function (err) { logger.e(err); }
+        //            })
+        //        },
+        //        onFail: function (err) { }
+
+        //    })
+        //});
+
+
+
+        //DingTalkPC.error(function (error) {
+        //    alert(error.errorCode);
+        //    alert(error.errorMessage);
+        //    logger.e('ready');
+        //});
+
+    </script>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+    
+    </div>
+    </form>
+</body>
+</html>
