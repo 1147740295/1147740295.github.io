@@ -6,6 +6,7 @@
 	<meta charset="utf-8" />
     <script src="https://g.alicdn.com/dingding/dingtalk-pc-api/2.7.0/index.js"></script>
     <script>
+	    alert('3');
         DingTalkPC.config({
             agentId: '81580927',
             corpId: 'dingca516652c6ac243b35c2f4657eb6378f',
@@ -17,6 +18,7 @@
         'device.notification.prompt',
             ]
         });
+	    	    alert('4');
         DingTalkPC.ready(function (res) {
             logger.i('ready');
             DingTalkPC.device.notification.alert({
