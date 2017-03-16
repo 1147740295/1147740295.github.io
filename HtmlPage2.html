@@ -40,7 +40,17 @@
                 onFail: function (err) { logger.i(err);}
             })
         });
+DingTalkPC.runtime.info({
+        onSuccess: function(info) {
+            //alert('runtime info: ' + JSON.stringify(info));
+        },
+        onFail: function(err) {
+            //alert('fail: ' + JSON.stringify(err));
+        }
+    });
+    DingTalkPC.error(function(err) {
 
+    });
        // DingTalkPC.error(function (error) {
        //     alert(error.errorCode);
       //      alert(error.errorMessage);
@@ -90,7 +100,7 @@
 <body>
     <form id="form1" runat="server">
     <div>
-    gygygy
+    tgtgtg
     </div>
     </form>
 </body>
