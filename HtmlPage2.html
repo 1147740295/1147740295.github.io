@@ -13,12 +13,23 @@
             corpId: 'dingca516652c6ac243b35c2f4657eb6378f',
             timeStamp: '1489642950',
             nonceStr: 'CUMT1987wlrrlw',
-            signature: '0ebc6f0ed0215c185d5a599bcd47bf7d7a1d3da4',
+            signature: '5UJG4POGcNk4soBMh9xT4wko3boeWfzASHJ9Z8ZhNlfoquaS7fj4QUI2DePoC8EwgK2kO6GuERsO6z3U0lTvry',
             jsApiList: [
                 'device.notification.alert',
                 'device.notification.prompt']
         });
         DingTalkPC.ready(function (res) {
+            DingTalkPC.runtime.permission.requestAuthCode({
+                corpId: "dingca516652c6ac243b35c2f4657eb6378f", //企业ID
+                onSuccess: function (result) {
+                    /*{
+                        code: 'hYLK98jkf0m' //string authCode
+                    }*/
+                },
+                onFail: function (err) { }
+
+            })
+            
             logger.i('ready');
             DingTalkPC.device.notification.alert({
                 message: "亲爱的",
@@ -80,7 +91,7 @@
 <body>
     <form id="form1" runat="server">
     <div>
-    ddddd
+    rtrtyrt
     </div>
     </form>
 </body>
