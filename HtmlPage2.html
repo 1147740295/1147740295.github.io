@@ -9,9 +9,9 @@
         DingTalkPC.config({
             agentId: '81580927',
             corpId: 'dingca516652c6ac243b35c2f4657eb6378f',
-            timeStamp: '1461565921',
+            timeStamp: '1489642950',
             nonceStr: 'CUMT1987wlrrlw',
-            signature: '5a8d22e4d4677738821e4530fc2ef87170d45bf6',
+            signature: '0ebc6f0ed0215c185d5a599bcd47bf7d7a1d3da4',
             jsApiList: [
         'device.notification.alert',
         'device.notification.prompt',
@@ -19,13 +19,13 @@
         });
 	    	 
         DingTalkPC.ready(function (res) {
-            
+            logger.i('ready');
             DingTalkPC.device.notification.alert({
                 message: "亲爱的",
                 title: "提示",
                 buttonName: "收到",
                 onSuccess: function () {
-                    
+                    logger.i('hello');;
                 },
                 onFail: function (err) { logger.i(err);}
             })
@@ -34,7 +34,7 @@
         DingTalkPC.error(function (error) {
             alert(error.errorCode);
             alert(error.errorMessage);
-            
+            logger.i('ready');
         });
     </script>
 </head>
