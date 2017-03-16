@@ -11,96 +11,53 @@
         dd.config({
             agentId: '81580927',
             corpId: 'dingca516652c6ac243b35c2f4657eb6378f',
-            timeStamp: '1489642950',
-            nonceStr: 'CUMT1987wlrrlw',
-            signature: '5UJG4POGcNk4soBMh9xT4wko3boeWfzASHJ9Z8ZhNlfoquaS7fj4QUI2DePoC8EwgK2kO6GuERsO6z3U0lTvry',
-            jsApiList: [
+            timeStamp: '1489684902',
+            nonceStr: 'Bglv2zNI',
+            signature: 'V7x36KKGskDnrGugUNIG4pk50GClxRfkZvgnoX3br8T6LMRANMTFSh2lX7Uhg8k5hl4XbYZovW1kgiSYl1WKiw',
+            jsApiList: ['runtime.info',
+                'biz.contact.choose',
+                'device.notification.confirm',
                 'device.notification.alert',
-                'device.notification.prompt']
+                'device.notification.prompt',
+                'biz.ding.post',
+            'runtime.permission.requestAuthCode',
+            'device.geolocation.get',
+            'biz.ding.post',
+            'biz.contact.complexChoose']
         });
-        dd.ready(function (res) {
+        dd.ready(function () {
+
+            //获取免登授权码 -- 注销获取免登服务，可以测试jsapi的一些方法
             dd.runtime.permission.requestAuthCode({
-                corpId: "dingca516652c6ac243b35c2f4657eb6378f", //企业ID
+                corpId: 'dingca516652c6ac243b35c2f4657eb6378f',
                 onSuccess: function (result) {
-                    /*{
-                        code: 'hYLK98jkf0m' //string authCode
-                    }*/
+                   
                 },
                 onFail: function (err) { }
 
-            })
-            
+            });
+
+
+
+            //这里写一个简单的jsapi的弹用，其它api的调用请参照钉钉开发文档-客户端开发文档
             dd.device.notification.alert({
-                message: "亲爱的",
-                title: "提示",
+                message: "测试弹窗",
+                title: "提示",//可传空
                 buttonName: "收到",
                 onSuccess: function () {
-
+                    /*回调*/
                 },
-                onFail: function (err) { logger.i(err);}
-            })
+                onFail: function (err) { }
+            });
+
         });
-dd.runtime.info({
-        onSuccess: function(info) {
-            //alert('runtime info: ' + JSON.stringify(info));
-        },
-        onFail: function(err) {
-            //alert('fail: ' + JSON.stringify(err));
-        }
-    });
-    dd.error(function(err) {
-
-    });
-       // DingTalkPC.error(function (error) {
-       //     alert(error.errorCode);
-      //      alert(error.errorMessage);
-//
-      //  });
-        //DingTalkPC.config({
-        //    agentId: '81580927',
-        //    corpId: 'dingca516652c6ac243b35c2f4657eb6378f',
-        //    timeStamp: '1489642950',
-        //    nonceStr: 'CUMT1987wlrrlw',
-        //    signature: '0ebc6f0ed0215c185d5a599bcd47bf7d7a1d3da4',
-        //    jsApiList: [
-        //'device.notification.alert',
-        //'device.notification.prompt',
-        //    ]
-        //});
-        //DingTalkPC.ready(function (res) {
-        //    DingTalkPC.runtime.permission.requestAuthCode({
-        //        corpId: "dingca516652c6ac243b35c2f4657eb6378f", //企业ID
-        //        onSuccess: function (result) {
-        //            logger.e('ready');
-        //            DingTalkPC.device.notification.alert({
-        //                message: "亲爱的",
-        //                title: "提示",
-        //                buttonName: "收到",
-        //                onSuccess: function () {
-        //                    logger.e('hello');;
-        //                },
-        //                onFail: function (err) { logger.e(err); }
-        //            })
-        //        },
-        //        onFail: function (err) { }
-
-        //    })
-        //});
-
-
-
-        //DingTalkPC.error(function (error) {
-        //    alert(error.errorCode);
-        //    alert(error.errorMessage);
-        //    logger.e('ready');
-        //});
 
     </script>
 </head>
 <body>
     <form id="form1" runat="server">
     <div>
-    tytyuy
+    SSDSA
     </div>
     </form>
 </body>
